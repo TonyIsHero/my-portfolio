@@ -1,0 +1,75 @@
+.contact-section {
+  padding: 8rem 1rem 4rem 1rem;
+  background: var(--bg-color);
+  text-align: center;
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  border-radius: 99px;
+  font-weight: 600;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.primary {
+    background: var(--text-primary);
+    color: var(--bg-color);
+  }
+
+  &.secondary {
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+    transition: background 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

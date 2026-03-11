@@ -1,0 +1,100 @@
+.tech-stack-section {
+  padding: 8rem 1rem;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #a1a1a6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tech-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    .icon-placeholder {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+.icon-placeholder {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  &.angular {
+    background-image: url('/images/angular.svg');
+    box-shadow: 0 0 20px rgba(221, 0, 49, 0.2);
+  }
+  &.spring {
+    background-image: url('/images/springboot.svg');
+    box-shadow: 0 0 20px rgba(109, 179, 63, 0.2);
+  }
+  &.gcp {
+    background-image: url('/images/bigquery.svg');
+    box-shadow: 0 0 20px rgba(66, 133, 244, 0.2);
+  }
+  &.dotnet {
+    background-image: url('/images/dotnet.svg');
+    box-shadow: 0 0 20px rgba(81, 43, 212, 0.2);
+  }
+  &.airflow {
+    background-image: url('/images/airflow.svg');
+    box-shadow: 0 0 20px rgba(1, 124, 238, 0.2);
+  }
+}
